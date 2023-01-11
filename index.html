@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Divs With js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Make Divs with js </h1>
+        <button class="btn-add" >Add New</button>
+    </header>
+    <main>
+        <h2>New Conatiner</h2>
+        <div id="div-container"></div>
+    </main>
+    <section>
+        <h2>Footer</h2>
+
+    </section>
+</body>
+<script>
+    const Btnadd=document.querySelector(".btn-add");
+    const  Divcontainer=document.getElementById("div-container");
+
+    Btnadd.addEventListener("click",AddNew);
+
+function AddNew(){
+    const newDiv= document.createElement("div");
+    console.log("add");
+    newDiv.classList.add('div-shadow');
+    Divcontainer.appendChild(newDiv);
+}
+</script>
+</html>
